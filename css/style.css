@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor0: #f2d479;
+    --cor1: #f1af09;
+    --cor2: #f2c438;
+}
+
+/*=============Configuração do menu de navegação==================*/
+nav {
+    height: 50px; /*define a largura da barra de navegação*/
+    background-color: black;
+    position: sticky; /*fixa a barra de tarefas no topo*/
+    top: 0;
+}
+
+nav ul {
+    list-style: none; /*tira os marcadores da lista*/
+    text-align: right;
+    height: 50px; /*define o tamanho da lista na barra */
+}
+
+nav li {
+    display: inline;
+    line-height: 50px; /*centraliza os elementos da lista na barra*/
+    padding-right: 20px;
+    font-size: 1.2em;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: var(--cor1);
+
+    transition: 0.5s;
+}
+/*===============================================*/
+
+/*====================Configuração main==================*/
+
+main {
+    min-width: 350px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 15px;
+    line-height: 2em; /*a leitura fica mais fácil aqui do que no paragrafo*/
+
+    animation-name: main-animation; /*chama a animação configurada em kayframes*/
+    animation-duration: 1s;
+}
+main img {
+    max-width: 100%;
+    margin: auto;
+    padding: auto;
+    padding-top: 20px;
+}
+
+.img-center {
+    /*centraliza as imagens da página de curiosidades*/
+    display: block;
+    margin: 0px auto;
+}
+
+main .img-racas {
+    width: 400px;
+    float: right;
+    padding-left: 10px;
+    padding-top: 12px;
+}
+
+main h1 {
+    font-size: 2.2em;
+    color: var(--cor1);
+    font-family: "Noto Sans", sans-serif;
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+
+main h2 {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    color: var(--cor1);
+    font-size: 2em;
+}
+
+main .h2_racas {
+    /*configuração dos subtitulos da página de raças*/
+    text-align: left;
+    font-size: 1.5em;
+}
+main h3 {
+    padding-bottom: 20px;
+    font-weight: normal; /*remove o negrito do título*/
+    font-style: italic;
+    text-align: center;
+    color: #ce9504;
+}
+main p {
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+main span {
+    color: var(--cor1);
+    font-size: 3em;
+}
+
+.span-text {
+    font-size: 1em;
+    color: var(--cor1);
+}
+
+article {
+    padding-bottom: 20px;
+}
+
+main .voltar {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #ce9504;
+}
+
+main .voltar:hover {
+    color: #f1af09;
+    text-decoration: underline;
+}
+
+@keyframes main-animation {
+    0% {
+        /*condição ao 0% (quando abre a página)*/
+        opacity: 0;
+        transform: translate(0, 20px);
+    }
+    100% {
+        /*condição aos 100% (quando a página carrega*/
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+}
+
+/*===============Configurações da parte interativa da página de curiosidades================*/
+aside {
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+    height: auto;
+    background-color: #f2d4792a;
+    border-radius: 10px;
+}
+
+aside h1 {
+    font-size: 1.6em;
+    background-color: #f2d4797c;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 15px;
+}
+aside label {
+    padding: 10px;
+    font-size: 1.3em;
+    font-style: italic;
+    color: #ad7d03;
+}
+
+#idade {
+    text-align: center; /*alinha o texto dentro da caixa*/
+    display: block;
+    width: 190px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#anos,
+#meses {
+    margin-left: 10px;
+    margin-top: 0;
+}
+.botao {
+    display: block;
+    margin: auto;
+    width: 150px;
+    height: 40px;
+    background-color: var(--cor0);
+    color: #ad7d03;
+    font-weight: bolder;
+    font-size: 1.2em;
+    border-radius: 5px;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.411);
+}
+
+.botao:hover {
+    background-color: var(--cor2);
+    color: white;
+
+    transition: 0.5s;
+}
+
+#res {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: justify;
+    font-style: italic;
+    border-radius: 5px;
+    color: #ad7d03;
+}
+/*=========================================*/
+
+/*=================Configurações do footer=================*/
+
+footer {
+    min-width: 350px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+footer ul {
+    list-style: none;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer li {
+    display: inline-block;
+    padding-left: 30px;
+}
+
+.icon-color {
+    color: var(--cor1);
+}
+
+li > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+footer li {
+    font-size: 1em;
+    margin: 1em 0;
+    display: inline-block;
+    padding-left: 30px;
+}
+
+/*======================================================*/
+
+.treeline {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2em;
+    right: 10px;
+    display: none;
+}
+
+.treeline:hover {
+    color: var(--cor1);
+
+    transition: 0.5s;
+}
+
+@media (max-width: 800px) {
+    nav li {
+        display: none;
+    }
+    .treeline {
+        display: block;
+    }
+
+    .menu-mobile {
+        height: auto;
+    }
+
+    .menu-mobile ul {
+        height: auto;
+        text-align: center;
+        padding-left: 15%; /*esse padding delimita a borda dos li a esquerda*/
+        padding-right: 15%; /*esse padding delimita a borda dos li a direita*/
+    }
+
+    .menu-mobile li {
+        display: block;
+        border-bottom: solid var(--cor0) 1px; /*define a borda dos elementos da lista*/
+    }
+
+    main {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    main h1 {
+        font-size: 2em;
+    }
+
+    main h2 {
+        font-size: 1.5em;
+    }
+
+    main .h2_racas {
+        font-size: 1.2em;
+    }
+
+    main .img-racas {
+        float: none;
+        display: block;
+        margin: 0px auto;
+        padding-bottom: 10px;
+    }
+
+    aside h1 {
+        font-size: 1.3em;
+    }
+
+    aside label {
+        font-size: 1em;
+    }
+
+    .botao {
+        margin-top: 15px;
+        max-width: 50%;
+        max-height: 30px;
+        font-size: 1em;
+    }
+
+    #idade {
+        max-width: 50%;
+        max-height: 30px;
+    }
+}
